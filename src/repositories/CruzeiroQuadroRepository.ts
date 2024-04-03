@@ -6,9 +6,9 @@ export default class CruzeiroRepository extends MongoRespository{
     public async findAll(){
         const db = await this.connect('api');
         const cruzeiro = db.collection('alteracao_cruzeiro');
+        const results = await cruzeiro.find({}).toArray();
+        await this.disconnect;
 
-        var teste = await cruzeiro.find({}).toArray();
-
-        console.log(teste);
+        return results;
     }
 }

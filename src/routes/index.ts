@@ -3,7 +3,7 @@ import UserController from "../controllers/User/UserController";
 import MongoRepository from "../repositories/MongoRepository";
 import UserRepository from "../repositories/UserRepository";
 import { Request, Response} from "express";
-import CruzeiroRepository from "../repositories/CruzeiroRepository";
+import CruzeiroRepository from "../repositories/CruzeiroQuadroRepository";
 import { mongo } from "mongoose";
 
 
@@ -23,8 +23,9 @@ router.delete("/users/:id", async (req,res) => {
 
 router.get("/cruzeiro", async (req,res) =>{
     const mongoCruzeiroRepository = new CruzeiroRepository();
-    mongoCruzeiroRepository.findAll()
-    res.send();
+    const results = await mongoCruzeiroRepository.findAll();
+    res.send(results);
+
 })
 
 
