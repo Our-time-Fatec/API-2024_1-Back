@@ -1,0 +1,21 @@
+Como clonar o repositorio:
+
+- git clone https://github.com/Our-time-Fatec/API-2024_1-Front.git
+- após clonar ele lembre de usar o comando npm i para instalar as dependencias
+
+
+Como dar commmit:
+
+- Abra o terminal do VSCode
+- Use git init para inicar o git
+- git config --global user.email "seuemaildogithub@gmail.com"
+- git config --global user.name "seuusernamedogithub"
+- git add .
+- git commit -m "aqui você escreve uma breve descrição do seu commit"
+- git push -f origin
+
+Para trocar a branch em que você esta:
+- git checkout(para ver em qual branch você está)
+- git checkout nome-da-branch(para mudar para a branch que você deseja)
+
+Use um git pull para poder puxar os arquivos da branch caso ela tenha outros arquivos
