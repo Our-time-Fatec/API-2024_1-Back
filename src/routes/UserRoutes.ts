@@ -3,9 +3,9 @@ import UserRepository from "../repositories/UserRepository";
 
 const routes = Router();
 
-routes.get("/", async (req,res) => {
+routes.post("/register", async (req,res) => {
     const mongoUserRepository = new UserRepository();
-    mongoUserRepository.createUser();
+    mongoUserRepository.createUser(req,res);
     res.send();
 })
 
