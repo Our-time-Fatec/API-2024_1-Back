@@ -9,10 +9,15 @@ routes.get("/", async (req,res) => {
     res.send();
 })
 
-routes.delete("/:id", async (req,res) => {
+routes.delete("/delete/:id", async (req,res) => {
     const mongoUserRepository = new UserRepository();
     mongoUserRepository.deleteUser(req,res)
     res.send();
 })
 
+routes.get("/list", async (req,res) => {
+    const mongoUserRepository = new UserRepository();
+    const results = await mongoUserRepository.listUsers()
+    res.send(results);
+})
 export default routes;

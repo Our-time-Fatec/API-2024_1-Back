@@ -10,6 +10,4 @@ const router = Router();
 router.use("/user", userRoutes);
 router.use("/cruzeiro", cruzeiroRoutes);
 
-
-
 export default router;
