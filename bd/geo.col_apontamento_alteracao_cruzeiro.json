@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "65f8d54fc60a8f925ce7a7ec"
+  },
+  "type": "Feature",
+  "properties": {
+    "id": 1,
+    "correcao": "fazer alteração",
+    "status": null,
+    "obs": null
+  },
+  "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+      [
+        -45.100994562352966,
+        -22.497705694528523
+      ]
+    ]
+  }
+},
+{
+  "_id": {
+    "$oid": "65f8d54fc60a8f925ce7a7ed"
+  },
+  "type": "Feature",
+  "properties": {
+    "id": 2,
+    "correcao": "fazer alerta",
+    "status": null,
+    "obs": null
+  },
+  "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+      [
+        -45.09341918542498,
+        -22.519274848053083
+      ]
+    ]
+  }
+}]
