@@ -82,7 +82,7 @@ export default class UserRepository extends MongoRespository{
                 return res.status(400).json({message: 'Você precisa fornecer um nome de usuário'});
             }
 
-            const regex = new RegExp(username, 'i');
+            const regex = new RegExp(`^${username}`, 'i');
             const foundUser = await userCollection.find({ username: {$regex: regex} }).toArray();
 
             if (foundUser.length === 0){
