@@ -13,7 +13,7 @@ const authenticateToken = (req: Request, res:Response, next: NextFunction) => {
             return res.status(403).json({ message: 'Token inválido'});
         }
 
-        req.body.userId = (decoded as any).userId;
+        req.body._id = (decoded as any)._id;
 
         next();
     });

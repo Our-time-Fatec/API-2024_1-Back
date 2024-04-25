@@ -47,7 +47,6 @@ export default class UserRepository extends MongoRespository{
         const { username, password } = req.body;
         const id = req.params.id
 
-
         const foundUser = await userCollection.findOne({username});
 
         if (!foundUser){
@@ -60,8 +59,8 @@ export default class UserRepository extends MongoRespository{
             return res.status(401).json({message: 'Senha incorreta'});
         }
 
-        const token = jwt.sign({ userId: foundUser.id}, 'chave_secreta', {expiresIn: '1h'});
-        res.status(200).json({message: 'Logado com sucesso'})
+        const token = jwt.sign({ userId: foundUser._id}, 'chave_secreta', {expiresIn: '1h'});
+        res.status(200).json({message: 'Logado com sucesso', username: foundUser.username, token})
 
     }
     public async findAllUser(){
