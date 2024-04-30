@@ -1,22 +1,12 @@
-import { IsString, IsStrongPassword, Matches, MaxLength, MinLength } from "class-validator";
-import DTO from "./DTO";
+import mongoose, { Schema } from "mongoose";
 
-export default class User extends DTO {
-    firstname: string;
-    lastname: string;
-    username: string;
-    password: string;
 
-    constructor(
-        firstname: string,
-        lastname: string,
-        username: string,
-        password: string
-    ){
-        super()
-        this.username = username
-        this.password = password
-        this.firstname = firstname
-        this.lastname = lastname
-    }
-}
+const UserSchema = new Schema({
+    name: { type: String, maxLength: 50, required: true },
+    mail: { type: String, maxLength: 50, required: true },
+    username: { type: String, maxLength: 50, required: true },
+    password: { type: String, required: true }
+});
+
+export const User = mongoose.model("User", UserSchema);
+

@@ -1,7 +1,7 @@
 import {Request, Response} from 'express';
-import MongoRespository from "./MongoRepository";
+import MongoConnection from "../models/MongoConnection";
 
-export default class CruzeiroRepository extends MongoRespository{
+export default class CruzeiroRepository extends MongoConnection{
    
     public async findAllAlteracao(){
         const db = await this.connect('api');

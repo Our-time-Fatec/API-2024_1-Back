@@ -1,17 +1,14 @@
 import { Router } from "express";
-import UserRepository from "../repositories/UserRepository";
+import UserRepository from "../controllers/UserController";
+import controller from "../controllers/UserController";
 
 const routes = Router();
 // Registra um usuário no sistema
-routes.post("/register", async (req,res) => {
-    const mongoUserRepository = new UserRepository();
-    mongoUserRepository.createUser(req,res);
-})
+routes.post("/register", controller.createUser);
 //Loga o usuário no sistema
-routes.post("/login", async (req,res) =>{
-    const mongoUserRepository = new UserRepository();
-    mongoUserRepository.LoginUser(req,res);
-})
+routes.post("/login", controller.login);
+/*
+
 //Deleta o usuário pelo id
 routes.delete("/delete/:id", async (req,res) => {
     const mongoUserRepository = new UserRepository();
@@ -28,5 +25,5 @@ routes.get("/all", async (req,res) =>{
     const results = await mongoUserRepository.findAllUser();
     res.send(results);
 })
-
+*/
 export default routes;

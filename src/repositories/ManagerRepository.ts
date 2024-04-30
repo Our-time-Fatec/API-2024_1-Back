@@ -1,7 +1,7 @@
 import {Request, Response} from 'express';
-import MongoRespository from "./MongoRepository";
+import MongoConnection from "../models/MongoConnection";
 
-export default class ManagerRepository extends MongoRespository{
+export default class ManagerRepository extends MongoConnection{
 
     public async createManager(){
         

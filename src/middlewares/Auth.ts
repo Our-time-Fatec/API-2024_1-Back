@@ -8,7 +8,7 @@ const authenticateToken = (req: Request, res:Response, next: NextFunction) => {
         return res.status(401).json({message: 'Token não fornecido'});
     }
 
-    jwt.verify(token, 'chave_secreta', (err, decoded) => {
+    jwt.verify(token, 'token', (err, decoded) => {
         if(err) {
             return res.status(403).json({ message: 'Token inválido'});
         }

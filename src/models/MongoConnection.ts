@@ -1,11 +1,11 @@
 import { MongoClient, Db } from "mongodb";
 
 
-export default abstract class MongoRespository {
+export default abstract class MongoConnection {
     private client: MongoClient;
   
     constructor(){
-      this.client = new MongoClient('mongodb://127.0.0.1:27017/bd_api');
+      this.client = new MongoClient('mongodb://127.0.0.1:27017/bdapi');
     }
   
     protected async connect(db_name: string): Promise<Db> {

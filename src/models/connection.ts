@@ -1,6 +1,6 @@
 import mongoose, { mongo } from "mongoose";
 
-const uri = "mongodb://127.0.0.1:27017/bd_api";
+const uri = "mongodb://127.0.0.1:27017/bdapi";
 
 export default function connect(){
     mongoose.connection.on("connected", () => console.log("connected"));

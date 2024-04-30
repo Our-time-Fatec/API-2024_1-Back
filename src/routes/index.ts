@@ -1,5 +1,5 @@
 import { Router } from "express";
-import UserRepository from "../repositories/UserRepository";
+import UserRepository from "../controllers/UserController";
 import { Request, Response} from "express";
 import cruzeiroRoutes from "./CruzeiroRoutes"
 import userRoutes from "./UserRoutes"
