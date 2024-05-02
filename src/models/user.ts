@@ -1,7 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 
 
-const UserSchema = new Schema({
+export const UserSchema = new Schema({
     name: { type: String, maxLength: 50, required: true },
     mail: { type: String, maxLength: 50, required: true },
     username: { type: String, maxLength: 50, required: true },

@@ -7,23 +7,11 @@ const routes = Router();
 routes.post("/register", controller.createUser);
 //Loga o usuário no sistema
 routes.post("/login", controller.login);
-/*
-
 //Deleta o usuário pelo id
-routes.delete("/delete/:id", async (req,res) => {
-    const mongoUserRepository = new UserRepository();
-    mongoUserRepository.deleteUser(req,res)
-})
+routes.delete("/delete/:id", controller.deleteUser);
 //Encontra o usuário pelo nome dele
-routes.get("/find/:username", async (req,res) =>{
-    const mongoUserRepository = new UserRepository();
-    mongoUserRepository.findUserbyName(req,res);
-})
+routes.get("/find/:name", controller.findUserbyName);
 //Puxa todos os usuários do banco
-routes.get("/all", async (req,res) =>{
-    const mongoUserRepository = new UserRepository();
-    const results = await mongoUserRepository.findAllUser();
-    res.send(results);
-})
-*/
+routes.get("/all", controller.findAllUser);
+
 export default routes;

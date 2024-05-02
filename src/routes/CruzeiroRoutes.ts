@@ -1,8 +1,9 @@
 import { Router } from "express";
-
+import controller from "../controllers/ProjetoController"
 import CruzeiroRepository from "../repositories/CruzeiroQuadroRepository";
 
 const routes = Router();
+routes.post("/create", controller.createProject);
 
 routes.get("/alteracao", async (req,res) =>{
     const mongoCruzeiroRepository = new CruzeiroRepository();
