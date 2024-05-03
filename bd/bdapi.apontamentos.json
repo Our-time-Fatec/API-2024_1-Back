@@ -1,0 +1,235 @@
+[{
+  "_id": {
+    "$oid": "66343bd4836c8e9cc2117b8b"
+  },
+  "name": "apontamento_alteracao_atibaia",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "correcao": "excluir",
+        "status": null,
+        "obs": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          331977.0506455904,
+          7452399.973613989
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "correcao": "excluir",
+        "status": null,
+        "obs": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          329810.69046349823,
+          7454159.5055928705
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "correcao": "fazer alerta",
+        "status": null,
+        "obs": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          329393.69155520824,
+          7452928.850278161
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "correcao": "fazer alerta",
+        "status": null,
+        "obs": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          330044.6166803434,
+          7451332.049580563
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "correcao": "corrigir atributo de imagem",
+        "status": null,
+        "obs": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          328813.96136563417,
+          7451749.0484888535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "correcao": "corrigir atributo de imagem",
+        "status": null,
+        "obs": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          327817.2322677703,
+          7454067.969247148
+        ]
+      }
+    }
+  ],
+  "crs": "31983"
+},
+{
+  "_id": {
+    "$oid": "66343bd4836c8e9cc2117b8c"
+  },
+  "name": "apontamento_alteracao_cruzeiro",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "correcao": "fazer alteração",
+        "status": null,
+        "obs": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          489612.0199510568,
+          7512078.815591415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "correcao": "fazer alerta",
+        "status": null,
+        "obs": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          490392.689943616,
+          7509691.766960321
+        ]
+      }
+    }
+  ],
+  "crs": "31983"
+},
+{
+  "_id": {
+    "$oid": "66343bd4836c8e9cc2117b8d"
+  },
+  "name": "apontamento_alteracao_taubate",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "correcao": "excluir",
+        "status": null,
+        "obs": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          430786.3280041356,
+          7455756.711109979
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "correcao": "excluir",
+        "status": null,
+        "obs": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          430898.73890406766,
+          7457011.218857441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "correcao": "excluir",
+        "status": null,
+        "obs": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          432683.8290104251,
+          7457438.381463181
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "correcao": "excluir",
+        "status": null,
+        "obs": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          429923.00920912036,
+          7458108.350792943
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "correcao": "corrigir atributo",
+        "status": null,
+        "obs": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          430440.10185550555,
+          7456853.843321223
+        ]
+      }
+    }
+  ],
+  "crs": "31983"
+}]

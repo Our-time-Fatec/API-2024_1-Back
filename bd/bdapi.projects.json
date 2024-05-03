@@ -1,0 +1,54 @@
+[{
+  "_id": {
+    "$oid": "66343bf6836c8e9cc2117b8e"
+  },
+  "name": "Atibaia",
+  "aoi": {
+    "$oid": "6634368b836c8e9cc2117b7b"
+  },
+  "grade": {
+    "$oid": "66343b96836c8e9cc2117b88"
+  },
+  "apontamentos": {
+    "$oid": "66343bd4836c8e9cc2117b8b"
+  },
+  "alteracoes": {
+    "$oid": "6634387b836c8e9cc2117b7e"
+  }
+},
+{
+  "_id": {
+    "$oid": "66343bf6836c8e9cc2117b8f"
+  },
+  "name": "Cruzeiro",
+  "aoi": {
+    "$oid": "6634368b836c8e9cc2117b7c"
+  },
+  "grades": {
+    "$oid": "66343b96836c8e9cc2117b89"
+  },
+  "apontamentos": {
+    "$oid": "66343bd4836c8e9cc2117b8c"
+  },
+  "alteracoes": {
+    "$oid": "6634387b836c8e9cc2117b7f"
+  }
+},
+{
+  "_id": {
+    "$oid": "66343bf6836c8e9cc2117b90"
+  },
+  "name": "Taubaté",
+  "aoi": {
+    "$oid": "6634368b836c8e9cc2117b7d"
+  },
+  "grades": {
+    "$oid": "66343b96836c8e9cc2117b8a"
+  },
+  "apontamentos": {
+    "$oid": "66343bd4836c8e9cc2117b8d"
+  },
+  "alteracoes": {
+    "$oid": "6634387b836c8e9cc2117b80"
+  }
+}]

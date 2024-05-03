@@ -1,4 +1,3 @@
-import { ObjectId } from "mongodb";
 import { Request, Response } from 'express';
 import { Projeto } from "../models/project";
 
@@ -11,6 +10,8 @@ class ProjetoController {
             if (!nomeProjeto || !aoiProjeto || !user) {
                 return res.status(400).json({ error: 'Todos os campos são obrigatórios.' });
             }
+
+            const aoiData = await Projeto.loadAoiData(aoiProjeto)
 
             const project = new Projeto({ nomeProjeto, aoiProjeto, user})
             const response = await project.save();
