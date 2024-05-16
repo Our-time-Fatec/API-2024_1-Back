@@ -6,10 +6,11 @@ import controllerAoi from "../controllers/AoiController";
 import controllerAlt from "../controllers/AlteracaoController";
 
 const routes = Router();
-routes.get("/project", controllerProj.findProject);
-routes.get("/grade", controllerGrade.findGrade);
-routes.get("/apontamento", controllerAponta.findApontamento);
-routes.get("/aoi", controllerAoi.findAoi);
-routes.get("/alteracoes", controllerAlt.findAlteracao);
+routes.get("/soloexpostoatibaia", controllerAlt.findSoloExpostoAtibaia);
+routes.get("/soloexpostocruzeiro", controllerAlt.findSoloExpostoCruzeiro);
+routes.get("/soloexpostotaubate", controllerAlt.findSoloExpostoTaubate);
+routes.get("/novaedificacaoatibaia", controllerAlt.findNovaEdificacaoAtibaia);
+routes.get("/novaedificacaocruzeiro", controllerAlt.findNovaEdificacaoCruzeiro);
+routes.get("/novaedificacaotaubate", controllerAlt.findNovaEdificacaoTaubate);
 
 export default routes;
