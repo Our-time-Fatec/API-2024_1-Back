@@ -41,6 +41,20 @@ class AlteracaoController {
             res.status(500).json({ error: 'Erro interno do servidor'});
         }
     }
+    public async findSupressaoAtibaia(req: Request, res:Response){
+        try{
+            const results = await Alteracoe.aggregate([
+                { $match: { name: "alteracao_atibaia" } },
+                { $unwind: "$features" },
+                { $match: { "features.properties.class": "Supressão de Vergetação" } },
+                { $count: "total_supressao" }
+              ])
+            res.status(200).json(results);
+        } catch(error){
+            console.error('Erro ao buscar:', error);
+            res.status(500).json({ error: 'Erro interno do servidor'});
+        }
+    }
     public async findSoloExpostoCruzeiro(req: Request, res:Response){
         try{
             const results = await Alteracoe.aggregate([
@@ -62,6 +76,20 @@ class AlteracaoController {
                 { $unwind: "$features" },
                 { $match: { "features.properties.class": "Nova Edificação" } },
                 { $count: "total" }
+              ])
+            res.status(200).json(results);
+        } catch(error){
+            console.error('Erro ao buscar:', error);
+            res.status(500).json({ error: 'Erro interno do servidor'});
+        }
+    }
+    public async findSupressaoCruzeiro(req: Request, res:Response){
+        try{
+            const results = await Alteracoe.aggregate([
+                { $match: { name: "alteracao_cruzeiro" } },
+                { $unwind: "$features" },
+                { $match: { "features.properties.class": "Supressão de Vergetação" } },
+                { $count: "total_supressao" }
               ])
             res.status(200).json(results);
         } catch(error){
@@ -97,7 +125,20 @@ class AlteracaoController {
             res.status(500).json({ error: 'Erro interno do servidor'});
         }
     }
-    
+    public async findSupressaoTaubate(req: Request, res:Response){
+        try{
+            const results = await Alteracoe.aggregate([
+                { $match: { name: "alteracao_taubate" } },
+                { $unwind: "$features" },
+                { $match: { "features.properties.class": "Supressão de Vergetação" } },
+                { $count: "total_supressao" }
+              ])
+            res.status(200).json(results);
+        } catch(error){
+            console.error('Erro ao buscar:', error);
+            res.status(500).json({ error: 'Erro interno do servidor'});
+        }
+    }
 }
 
 export default new AlteracaoController();

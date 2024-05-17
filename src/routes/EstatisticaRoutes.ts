@@ -12,5 +12,8 @@ routes.get("/soloexpostotaubate", controllerAlt.findSoloExpostoTaubate);
 routes.get("/novaedificacaoatibaia", controllerAlt.findNovaEdificacaoAtibaia);
 routes.get("/novaedificacaocruzeiro", controllerAlt.findNovaEdificacaoCruzeiro);
 routes.get("/novaedificacaotaubate", controllerAlt.findNovaEdificacaoTaubate);
+routes.get("/supressaoatibaia", controllerAlt.findSupressaoAtibaia);
+routes.get("/supressaocruzeiro", controllerAlt.findSupressaoCruzeiro);
+routes.get("/supressaotaubate", controllerAlt.findSupressaoTaubate);
 
 export default routes;
