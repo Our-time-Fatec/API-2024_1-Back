@@ -7,15 +7,15 @@ import controllerAlt from "../controllers/AlteracaoController";
 
 const routes = Router();
 // Routes para Alteração
-routes.get("/soloexpostoatibaia", controllerAlt.findSoloExpostoAtibaia);
-routes.get("/soloexpostocruzeiro", controllerAlt.findSoloExpostoCruzeiro);
-routes.get("/soloexpostotaubate", controllerAlt.findSoloExpostoTaubate);
-routes.get("/novaedificacaoatibaia", controllerAlt.findNovaEdificacaoAtibaia);
-routes.get("/novaedificacaocruzeiro", controllerAlt.findNovaEdificacaoCruzeiro);
-routes.get("/novaedificacaotaubate", controllerAlt.findNovaEdificacaoTaubate);
-routes.get("/supressaoatibaia", controllerAlt.findSupressaoAtibaia);
-routes.get("/supressaocruzeiro", controllerAlt.findSupressaoCruzeiro);
-routes.get("/supressaotaubate", controllerAlt.findSupressaoTaubate);
+routes.get("/soloexposto/:municipio", controllerAlt.findSoloExposto);
+routes.get("/edificacao/:municipio", controllerAlt.findNovaEdificacao);
+routes.get("/supressao/:municipio", controllerAlt.findSupressao);
 // Routes para Apontamentos
-routes.get("/excluiratibaia", controllerAponta.findExcluirAtibaia);
+routes.get("/correcaoexcluir/:municipio", controllerAponta.findCorrecaoExcluir);
+routes.get("/correcaoalerta/:municipio", controllerAponta.findCorrecaoFazerAlerta);
+routes.get("/correcaoalteracao/:municipio", controllerAponta.findCorrecaoFazerAlteracao);
+routes.get("/correcaoatributo/:municipio", controllerAponta.findCorrecaoCorrigirAtributo);
+routes.get("/correcaoimagem/:municipio", controllerAponta.findCorrecaoCorrigirAtributoImagem);
+
+
 export default routes;
