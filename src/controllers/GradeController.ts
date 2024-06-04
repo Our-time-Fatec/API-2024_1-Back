@@ -12,7 +12,8 @@ class GradeController {
                 { $match: { name: columnName } },
                 { $unwind: "$features" },
                 { $group: { _id: null, total: { $sum: 1 }, finalized: { $sum: { $cond: [{ $eq: ["$features.properties.status", "finalizado"] }, 1, 0] } } } },
-                { $project: { _id: 0, total: 1, finalized: 1, percentage: { $multiply: [{ $divide: ["$finalized", "$total"] }, 100] } } }
+                { $project: { _id: 0, total: 1, finalized: 1, percentage: { $multiply: [{ $divide: ["$finalized", "$total"] }, 100] } } },
+                { $project: { total: 1, finalized: 1, percentage: { $round: ["$percentage", 2] } } }
               ])
 
             res.status(200).json(results);
