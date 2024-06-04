@@ -6,10 +6,17 @@ import controllerAoi from "../controllers/AoiController";
 import controllerAlt from "../controllers/AlteracaoController";
 
 const routes = Router();
-routes.get("/project", controllerProj.findProject);
-routes.get("/grade", controllerGrade.findGrade);
-routes.get("/apontamento", controllerAponta.findApontamento);
-routes.get("/aoi", controllerAoi.findAoi);
-routes.get("/alteracoes", controllerAlt.findAlteracao);
+// Routes para Alteração
+routes.get("/soloexposto/:municipio", controllerAlt.findSoloExposto);
+routes.get("/edificacao/:municipio", controllerAlt.findNovaEdificacao);
+routes.get("/supressao/:municipio", controllerAlt.findSupressao);
+// Routes para Apontamentos
+routes.get("/correcaoexcluir/:municipio", controllerAponta.findCorrecaoExcluir);
+routes.get("/correcaoalerta/:municipio", controllerAponta.findCorrecaoFazerAlerta);
+routes.get("/correcaoalteracao/:municipio", controllerAponta.findCorrecaoFazerAlteracao);
+routes.get("/correcaoatributo/:municipio", controllerAponta.findCorrecaoCorrigirAtributo);
+routes.get("/correcaoimagem/:municipio", controllerAponta.findCorrecaoCorrigirAtributoImagem);
+// Routes para Grade
+routes.get("/porcentagem/:municipio", controllerGrade.PorcentagemGrade);
 
 export default routes;
