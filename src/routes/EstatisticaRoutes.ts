@@ -16,6 +16,7 @@ routes.get("/correcaoalerta/:municipio", controllerAponta.findCorrecaoFazerAlert
 routes.get("/correcaoalteracao/:municipio", controllerAponta.findCorrecaoFazerAlteracao);
 routes.get("/correcaoatributo/:municipio", controllerAponta.findCorrecaoCorrigirAtributo);
 routes.get("/correcaoimagem/:municipio", controllerAponta.findCorrecaoCorrigirAtributoImagem);
-
+// Routes para Grade
+routes.get("/porcentagem/:municipio", controllerGrade.PorcentagemGrade);
 
 export default routes;
