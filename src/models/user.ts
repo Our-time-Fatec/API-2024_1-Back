@@ -5,7 +5,8 @@ export const UserSchema = new Schema({
     name: { type: String, maxLength: 50, required: true },
     mail: { type: String, maxLength: 50, required: true },
     username: { type: String, maxLength: 50, required: true },
-    password: { type: String, required: true }
+    password: { type: String, required: true },
+    status: {type: String, enum: ["user", "admin"], default: "user"}
 });
 
 export const User = mongoose.model("User", UserSchema);

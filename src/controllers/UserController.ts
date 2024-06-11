@@ -2,20 +2,21 @@ import { ObjectId } from "mongodb";
 import { Request, Response } from 'express';
 import bcrypt from 'bcrypt';
 import jwt from "jsonwebtoken";
+import { tokenize } from "../middlewares/Auth";
 import { User } from "../models/user";
 
 class UserController {
 
     public async createUser(req: Request, res: Response) {
         try {
-            const { name, mail, username, password } = req.body;
+            const { name, mail, username, password, status } = req.body;
 
             if (!name || !mail || !username || !password) {
                 return res.status(400).json({ error: 'Todos os campos são obrigatórios.' });
             }
 
             const hashedPassword = await bcrypt.hash(password, 10);
-            const user = new User({ name, mail, username, password: hashedPassword });
+            const user = new User({ name, mail, username, password: hashedPassword, status });
             const response = await user.save();
             res.status(201).json({ message: 'Usuario cadastrado com sucesso.' });
         } catch (error) {
@@ -44,8 +45,9 @@ class UserController {
         if (!isPasswordValid) {
             return res.status(401).json({ message: 'Senha incorreta.' });
         }
-
-        const token = jwt.sign({ userId: user._id }, 'token', { expiresIn: '1h' });
+        if (user) {
+            res.json({ ...user.toObject(), token: tokenize(user.toObject()) });
+          }
         res.status(200).json({ message: 'Logado com sucesso.', user })
     }
 
