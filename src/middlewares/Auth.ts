@@ -5,7 +5,9 @@ dotenv.config();
 
 const secret = process.env.JWT_SECRET || "";
 
-export const tokenize = (object: any) => jwt.sign(object, secret);
+export const tokenize = (object: any) => {
+    return jwt.sign(object, secret, { expiresIn: '1h' });
+};
 
 export const validadeAcess = async (
   req: Request,

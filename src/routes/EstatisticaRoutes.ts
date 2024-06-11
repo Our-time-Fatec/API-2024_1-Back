@@ -18,5 +18,6 @@ routes.get("/correcaoatributo/:municipio", controllerAponta.findCorrecaoCorrigir
 routes.get("/correcaoimagem/:municipio", controllerAponta.findCorrecaoCorrigirAtributoImagem);
 // Routes para Grade
 routes.get("/porcentagem/:municipio", controllerGrade.PorcentagemGrade);
+routes.get("/grafico/:municipio", controllerGrade.GraficoGrade);
 
 export default routes;
