@@ -46,9 +46,8 @@ class UserController {
             return res.status(401).json({ message: 'Senha incorreta.' });
         }
         if (user) {
-            res.json({ ...user.toObject(), token: tokenize(user.toObject()) });
+            res.json({message: 'Logado com sucesso.', ...user.toObject(), token: tokenize(user.toObject()) });
           }
-        res.status(200).json({ message: 'Logado com sucesso.', user })
     }
 
     public async deleteUser(req: Request, res: Response): Promise<void> {
